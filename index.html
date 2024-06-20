@@ -7,30 +7,36 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
 
 </head>
-<body>
+<body class="m-4">
     <header>
 
     </header>
 
     <!-- main container -->
     <main>
-        <div>
+        <div class="flex flex-col md:flex-row ">
             <!-- shape card container  -->
-            <div>
+            <div class="flex-1 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 ">
                 <!-- triangle card -->
-                <div class="card card-compact w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                    <div class="card-body">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
+                <div class="card card-compact w-80 bg-base-100 shadow-xl text-center ">
+                    <figure><img src="images/triangle.png" alt="Traiangle" class="w-75"/></figure>
+                    <div class="card-body flex-auto">
+                      <h2 class="card-title text-center flex-auto">Triangle</h2>
+                      <p>Area(A) = 0.5 x b x h </p>
+                     <div>
+                        <input type="text" placeholder="b" class="w-24 text-xl p-2 rounded-sm ">
+                        <span>cm</span>
+                        <input type="text" placeholder="h" class="w-24 text-xl p-2 rounded-sm ">
+                        <span>cm</span>
+                     </div>
+                      <div class="card-actions  ">
+                        <button class="btn btn-primary w-full" onclick="calculateTriangle()">calculate</button>
                       </div>
                     </div>
                   </div>
 
                    <!-- triangle card -->
-                <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                <div class="card p-4 card-compact w-96 bg-base-100 shadow-xl">
                     <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
                     <div class="card-body">
                       <h2 class="card-title">Shoes!</h2>
@@ -58,9 +64,9 @@
             </div>
 
             <!-- area calculation  -->
-             <div class="w-96">
+             <div class="w-96 border-2 border-gray-700 rounded-md  " >
 
-                <h3 class="text-3xl">Area calculation</h3>
+                <h3 class="text-3xl text-center p-4 ">Area calculation</h3>
 
              </div>
         </div>
@@ -70,5 +76,6 @@
 
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="calculate.js"></script>
 </body>
 </html>
