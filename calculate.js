@@ -11,3 +11,16 @@ function calculateTriangle(){
 
     alert(triangle)
 }
+
+// rectangle area 
+
+function rectangleCalculate(){
+    const rectangleWidthText = document.getElementById('rectangleWidth').value ;
+    const rectangleWidth = parseFloat(rectangleWidthText)
+    
+    const rectangleLengthText = document.getElementById('rectangleLength').value ;
+    const rectangleLength = parseFloat(rectangleLengthText);
+    const rectangle =  rectangleWidth * rectangleLength;
+
+    alert(rectangle)
+}
