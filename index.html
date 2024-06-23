@@ -17,6 +17,7 @@
         <div class="flex flex-col md:flex-row ">
             <!-- shape card container  -->
             <div class="flex-1 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 ">
+
                 <!-- triangle card -->
                 <div class="card card-compact w-80 bg-base-100 shadow-xl text-center ">
                     <figure><img src="images/triangle.png" alt="Traiangle" class="w-75"/></figure>
@@ -37,7 +38,7 @@
 
                    <!-- rectangle card -->
                 <div class="card p-4 card-compact w-96 bg-base-100 shadow-xl m-2">
-                    <figure><img src="images/rectangle.png" /></figure>
+                    <figure><img src="images/rectangle.png" class="w-75" /></figure>
                     <div class="card-body">
                       <h2 class="card-title">Rectangle </h2>
                       <p>Area (A) = w X I </p>
@@ -52,17 +53,56 @@
                     </div>
                   </div>
 
-                   <!-- triangle card -->
-                <div class="card card-compact p-4 w-96 bg-base-100 shadow-xl m-2">
-                    <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                   <!-- parallelogram card -->
+                <div class="card p-4 card-compact w-96 bg-base-100 shadow-xl m-2">
+                  <figure><img src="images/parallelogram.png" class="w-75" /></figure>
+                  <div class="card-body">
+                    <h2 class="card-title">Peralelogram </h2>
+                    <p>Area (A) = b X h </p>
+
+                    <div>
+                      <input type="text" id="parallelogramBase" placeholder= "base" class="w-24 text-xl p-2 rounded-sm " ><span>cm</span>
+                      <input type="text" id="parallelogramHeight" class="w-24 text-xl p-2 rounded-sm " placeholder= " height"><span>cm</span>
+                    </div>
+                    <div class="card-actions justify-end">
+                      <button class="btn btn-primary w-full" onclick="parallelogramCalculate()">Calculate</button>
+                    </div>
+                  </div>
+                </div>
+
+                  <!-- rectangle card -->
+                  <div class="card p-4 card-compact w-96 bg-base-100 shadow-xl m-2">
+                    <figure><img src="images/rectangle.png" class="w-75" /></figure>
                     <div class="card-body">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <h2 class="card-title">Rectangle </h2>
+                      <p>Area (A) = w X I </p>
+
+                      <div>
+                        <input type="text" id="rectangleWidth" placeholder= " width" class="w-24 text-xl p-2 rounded-sm " ><span>cm</span>
+                        <input type="text" id="rectangleLength" class="w-24 text-xl p-2 rounded-sm " placeholder= " Length"><span>cm</span>
+                      </div>
                       <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
+                        <button class="btn btn-primary w-full" onclick="rectangleCalculate()">Calculate</button>
                       </div>
                     </div>
                   </div>
+
+                    <!-- rectangle card -->
+                <div class="card p-4 card-compact w-96 bg-base-100 shadow-xl m-2">
+                  <figure><img src="images/rectangle.png" class="w-75" /></figure>
+                  <div class="card-body">
+                    <h2 class="card-title">Rectangle </h2>
+                    <p>Area (A) = w X I </p>
+
+                    <div>
+                      <input type="text" id="rectangleWidth" placeholder= " width" class="w-24 text-xl p-2 rounded-sm " ><span>cm</span>
+                      <input type="text" id="rectangleLength" class="w-24 text-xl p-2 rounded-sm " placeholder= " Length"><span>cm</span>
+                    </div>
+                    <div class="card-actions justify-end">
+                      <button class="btn btn-primary w-full" onclick="rectangleCalculate()">Calculate</button>
+                    </div>
+                  </div>
+                </div>
 
                   
 
