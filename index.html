@@ -14,9 +14,9 @@
 
     <!-- main container -->
     <main>
-        <div class="flex flex-col md:flex-row ">
+        <div class="flex flex-cols-2 md:flex-row ">
             <!-- shape card container  -->
-            <div class="flex-1 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 ">
+            <div class="flex-1 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-2 w-75 overflow-hidden">
 
                 <!-- triangle card -->
                 <div class="card card-compact w-80 bg-base-100 shadow-xl text-center ">
@@ -37,7 +37,7 @@
                   </div>
 
                    <!-- rectangle card -->
-                <div class="card p-4 card-compact w-96 bg-base-100 shadow-xl m-2">
+                <div class="card p-4 card-compact w-80 bg-base-100 shadow-xl m-2">
                     <figure><img src="images/rectangle.png" class="w-75" /></figure>
                     <div class="card-body">
                       <h2 class="card-title">Rectangle </h2>
@@ -54,10 +54,10 @@
                   </div>
 
                    <!-- parallelogram card -->
-                <div class="card p-4 card-compact w-96 bg-base-100 shadow-xl m-2">
+                <div class="card p-4 card-compact w-80 bg-base-100 shadow-xl m-2">
                   <figure><img src="images/parallelogram.png" class="w-75" /></figure>
                   <div class="card-body">
-                    <h2 class="card-title">Peralelogram </h2>
+                    <h2 class="card-title">Perallelogram </h2>
                     <p>Area (A) = b X h </p>
 
                     <div>
@@ -70,48 +70,49 @@
                   </div>
                 </div>
 
-                  <!-- rectangle card -->
-                  <div class="card p-4 card-compact w-96 bg-base-100 shadow-xl m-2">
-                    <figure><img src="images/rectangle.png" class="w-75" /></figure>
+                  <!-- pentagon card -->
+                  <div class="card p-4 card-compact w-80 bg-base-100 shadow-xl m-2">
+                    <figure><img src="images/pentagon.png" class="w-75" /></figure>
                     <div class="card-body">
-                      <h2 class="card-title">Rectangle </h2>
-                      <p>Area (A) = w X I </p>
-
+                      <h2 class="card-title">Pentagon  </h2>
+                      <p>Area(A) = 0.5 x p x a </p>
                       <div>
-                        <input type="text" id="rectangleWidth" placeholder= " width" class="w-24 text-xl p-2 rounded-sm " ><span>cm</span>
-                        <input type="text" id="rectangleLength" class="w-24 text-xl p-2 rounded-sm " placeholder= " Length"><span>cm</span>
+                         <input type="text" placeholder="p" class="w-24 text-xl p-2 rounded-sm " id="pentaPerimeter">
+                         <span>cm</span>
+                         <input type="text" placeholder="a" class="w-24 text-xl p-2 rounded-sm " id="pentaApothem">
+                         <span>cm</span>
                       </div>
                       <div class="card-actions justify-end">
-                        <button class="btn btn-primary w-full" onclick="rectangleCalculate()">Calculate</button>
+                        <button class="btn btn-primary w-full" onclick="pentagonCalculate()">Calculate</button>
                       </div>
                     </div>
                   </div>
 
-                    <!-- rectangle card -->
-                <div class="card p-4 card-compact w-96 bg-base-100 shadow-xl m-2">
-                  <figure><img src="images/rectangle.png" class="w-75" /></figure>
+                    <!-- rhombus card -->
+                <div class="card p-4 card-compact w-80 bg-base-100 shadow-xl m-2">
+                  <figure><img src="images/rhombus.png" class="w-75" /></figure>
                   <div class="card-body">
-                    <h2 class="card-title">Rectangle </h2>
-                    <p>Area (A) = w X I </p>
+                    <h2 class="card-title">Rhombus </h2>
+                    <p>Area (A) =0.5 * b X h </p>
 
                     <div>
-                      <input type="text" id="rectangleWidth" placeholder= " width" class="w-24 text-xl p-2 rounded-sm " ><span>cm</span>
-                      <input type="text" id="rectangleLength" class="w-24 text-xl p-2 rounded-sm " placeholder= " Length"><span>cm</span>
+                      <input type="text" id="rhombusBase" placeholder= " b" class="w-24 text-xl p-2 rounded-sm " ><span>cm</span>
+
+                      <input type="text" id="rhombusHeight" class="w-24 text-xl p-2 rounded-sm " placeholder= " h"><span>cm</span>
                     </div>
                     <div class="card-actions justify-end">
-                      <button class="btn btn-primary w-full" onclick="rectangleCalculate()">Calculate</button>
+                      <button class="btn btn-primary w-full" onclick="rhombusCalculate()">Calculate</button>
                     </div>
                   </div>
                 </div>
-
-                  
-
             </div>
 
             <!-- area calculation  -->
-             <div class="w-96 border-2 border-gray-700 rounded-md  " >
+             <div class="w-80 border-2 border-gray-700 rounded-md " >
 
                 <h3 class="text-3xl text-center p-4 ">Area calculation</h3>
+
+                <h5 class="text-2xl text-center"> <span id="outputResult"></span> cm<sup>2</sup></h5>
 
              </div>
         </div>

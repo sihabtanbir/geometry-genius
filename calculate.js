@@ -1,4 +1,4 @@
-
+var outputResult = document.getElementById('outputResult');
 // triangle area 
 
 function calculateTriangle(){
@@ -7,9 +7,9 @@ function calculateTriangle(){
     
     const trinangleHeightText = document.getElementById('triangleHeight').value ;
     const trinangleHeight = parseFloat(trinangleHeightText);
-    const triangle = 0.5* trinangleBase * trinangleHeight;
+    const result = 0.5* trinangleBase * trinangleHeight;
 
-    alert(triangle)
+    outputResult.innerText = "Triangle is "+ result ;
 }
 
 // rectangle area 
@@ -20,9 +20,9 @@ function rectangleCalculate(){
     
     const rectangleLengthText = document.getElementById('rectangleLength').value ;
     const rectangleLength = parseFloat(rectangleLengthText);
-    const rectangle =  rectangleWidth * rectangleLength;
+    const result =  rectangleWidth * rectangleLength;
 
-    alert(rectangle)
+    outputResult.innerText = "Rectangle is "+ result ;
 }
 
 function getInput(inputFildId){
@@ -36,5 +36,22 @@ function parallelogramCalculate(){
     
     const height = getInput('parallelogramHeight');
     const result = base * height;
-    alert(result);
+    outputResult.innerText = "Parallelogram is "+ result ;
+}
+
+    function pentagonCalculate(){
+        const perimeter = getInput('pentaPerimeter');
+        
+        const apothem = getInput('pentaApothem');
+        const result =  0.5* perimeter * apothem ;
+        outputResult.innerText = "Pentagon is "+ result ;
+}
+
+function rhombusCalculate(){
+    const base = getInput('rhombusBase');
+    
+    const height = getInput('rhombusHeight');
+    const result =0.5*  base * height;
+    outputResult.innerText = "Rhombus is "+ result ;
+    
 }
